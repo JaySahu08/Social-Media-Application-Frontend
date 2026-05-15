@@ -3,7 +3,6 @@ function Navbar({ currentUser, onLogout }) {
         <header className="navbar">
             <div>
                 <h1>SocialConnect</h1>
-                <p>Chat, post, like, and comment with friends</p>
             </div>
 
             {currentUser && (
