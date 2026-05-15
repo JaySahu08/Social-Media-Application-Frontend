@@ -1,0 +1,443 @@
+.app-shell {
+  min-height: 100vh;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 32px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.navbar p {
+  margin: 4px 0 0;
+  opacity: 0.85;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 700;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr) 360px;
+  gap: 24px;
+  width: min(1440px, calc(100% - 32px));
+  margin: 24px auto;
+}
+
+.sidebar,
+.feed-column,
+.chat-column {
+  min-width: 0;
+}
+
+.auth-page {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 92px);
+  padding: 32px 16px;
+}
+
+.auth-card {
+  width: min(460px, 100%);
+  padding: 32px;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+}
+
+.auth-intro {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.auth-card h2,
+.friends-card h2,
+.chat-card h2 {
+  margin: 0 0 10px;
+}
+
+.auth-card p {
+  color: #6b7280;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: #374151;
+  font-weight: 700;
+}
+
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  padding: 13px 14px;
+  color: #111827;
+  background: #ffffff;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: 3px solid rgba(37, 99, 235, 0.18);
+  border-color: #2563eb;
+}
+
+button {
+  border: 0;
+  border-radius: 14px;
+  padding: 12px 16px;
+  color: #ffffff;
+  background: #2563eb;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.text-button {
+  width: 100%;
+  margin-top: 16px;
+  color: #2563eb;
+  background: transparent;
+}
+
+.text-button:hover {
+  background: #eff6ff;
+}
+
+.alert {
+  width: min(1440px, calc(100% - 32px));
+  box-sizing: border-box;
+  margin: 18px auto 0;
+  padding: 14px 18px;
+  border-radius: 16px;
+  font-weight: 700;
+}
+
+.success {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.error {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.friends-card,
+.post-composer,
+.post-card,
+.chat-card,
+.empty-state {
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.friends-card {
+  padding: 20px;
+  position: sticky;
+  top: 24px;
+}
+
+.friend-list {
+  display: grid;
+  gap: 10px;
+}
+
+.friend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  color: #111827;
+  background: #f9fafb;
+  text-align: left;
+}
+
+.friend:hover,
+.friend.active {
+  color: #ffffff;
+  background: #2563eb;
+}
+
+.friend small {
+  display: block;
+  opacity: 0.75;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  font-weight: 900;
+}
+
+.post-composer {
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.media-inputs {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.media-inputs input {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.composer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  color: #6b7280;
+}
+
+.feed {
+  display: grid;
+  gap: 18px;
+}
+
+.empty-state {
+  padding: 32px;
+  text-align: center;
+}
+
+.empty-state p {
+  color: #6b7280;
+}
+
+.post-card {
+  padding: 22px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.post-header h3 {
+  margin: 0;
+}
+
+.post-header p {
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.post-content {
+  margin: 18px 0;
+  color: #1f2937;
+  line-height: 1.7;
+}
+
+.post-media {
+  margin: 16px -22px;
+  background: #000;
+}
+
+.post-media img,
+.post-media video {
+  display: block;
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.post-actions span {
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.comments {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.comment {
+  display: grid;
+  gap: 3px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #f3f4f6;
+}
+
+.comment strong {
+  font-size: 14px;
+}
+
+.comment span {
+  color: #374151;
+}
+
+.comment-form,
+.message-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.chat-card {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 140px);
+  position: sticky;
+  top: 24px;
+  overflow: hidden;
+}
+
+.empty-chat {
+  display: block;
+  height: auto;
+  padding: 24px;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.chat-header h2,
+.chat-header p {
+  margin: 0;
+}
+
+.chat-header p {
+  color: #16a34a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.messages {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  overflow-y: auto;
+}
+
+.message {
+  max-width: 78%;
+  align-self: flex-start;
+  padding: 10px 14px;
+  border-radius: 16px 16px 16px 4px;
+  background: #e5e7eb;
+}
+
+.own-message {
+  align-self: flex-end;
+  color: #ffffff;
+  border-radius: 16px 16px 4px 16px;
+  background: #2563eb;
+}
+
+.message p {
+  margin: 0;
+}
+
+.message-form {
+  padding: 14px;
+  border-top: 1px solid #e5e7eb;
+}
+
+@media (max-width: 1180px) {
+  .layout {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+
+  .chat-column {
+    grid-column: 1 / -1;
+  }
+
+  .chat-card {
+    height: 520px;
+    position: static;
+  }
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    width: min(100% - 20px, 1440px);
+  }
+
+  .friends-card,
+  .chat-card {
+    position: static;
+  }
+
+  .comment-form,
+  .message-form {
+    flex-direction: column;
+  }
+
+  .post-actions,
+  .composer-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
