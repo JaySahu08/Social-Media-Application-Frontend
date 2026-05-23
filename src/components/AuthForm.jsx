@@ -35,9 +35,7 @@ function AuthForm({ onLogin, onRegister }) {
                 <div className="auth-intro">
                     <p className="eyebrow">Welcome</p>
                     <h2>{mode === 'login' ? 'Login to your account' : 'Create a new account'}</h2>
-                    <p>
-                        Join your friends, share posts, comment, like, and chat in real time.
-                    </p>
+
                 </div>
 
                 <form onSubmit={handleSubmit}>

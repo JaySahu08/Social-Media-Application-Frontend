@@ -38,6 +38,11 @@ function App() {
     setMessages([])
   }
 
+  function handleCloseChat() {
+    setSelectedFriend(null)
+    setMessages([])
+  }
+
   async function refreshUsers() {
     try {
       const data = await getUsers()
@@ -233,7 +238,7 @@ function App() {
         {!currentUser ? (
             <AuthForm onLogin={handleLogin} onRegister={handleRegister} />
         ) : (
-            <main className="layout">
+            <main className={selectedFriend ? 'layout chat-open' : 'layout'}>
               <aside className="sidebar">
                 <FriendList
                     friends={friends}
@@ -251,14 +256,17 @@ function App() {
                 />
               </section>
 
+              {selectedFriend && (
               <aside className="chat-column">
                 <ChatWindow
                     currentUser={currentUser}
                     selectedFriend={selectedFriend}
                     messages={messages}
                     onSendMessage={handleSendMessage}
+                    onClose={handleCloseChat}
                 />
               </aside>
+              )}
             </main>
         )}
       </div>
